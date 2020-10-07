@@ -4,10 +4,11 @@ class Person
     attr_reader :name
     attr_accessor :bank_account, :happiness, :hygiene
 
-    def initalize(name, bank_account = 25, happiness = 8, hygiene = 8)
+    def initialize(name, bank_account = 25, happiness = 8, hygiene = 8)
         @name = name
         @bank_account = bank_account
         @happiness = happiness
+        @hygiene = hygiene
     end
 
     def happiness
@@ -29,7 +30,7 @@ class Person
     end
 
     def happy?
-        self.happiness > 7 ? true : false
+        self.happiness > 7 ? true : false 
     end
 
     # def happy?
@@ -55,8 +56,8 @@ class Person
     end
 
     def work_out
-        self.hygiene -= 3
         self.happiness += 2
+        self.hygiene -= 3
         p "♪ another one bites the dust ♫"
     end
 
@@ -80,7 +81,7 @@ class Person
             p "blah blah sun blah rain"
 
         else
-            
+
             p "blah blah blah blah blah"
 
         end
